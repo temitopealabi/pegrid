@@ -1,0 +1,205 @@
+@import '~antd/dist/antd.css';
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menuIcon{
+  font-size: 1.15rem; color: white
+}
+
+.fontDark{
+  color: #000000;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.superAdminLine { height: 6px; }
+
+.fontNormal{
+  font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+color: #161515;
+}
+
+
+.ant-layout-header {
+  height: 86px;
+  line-height: 86px;
+}
+
+.ant-layout-header{
+  background-color: #1E1C1C !important;
+  color: white !important;
+}
+
+.ant-layout {
+  /* background-color: #f6f9ff !important; */
+  background: #E5E5E5 !important;
+}
+
+/* sidebar */
+.ant-layout-sider {
+  background-color: #1E1C1C !important;
+}
+
+.ant-layout-content{
+  /* background: #FAF9F7 !important; */
+  background: #E5E5E5 !important;
+}
+
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+  background-color: #1E1C1C !important;
+}
+.ant-menu-item {
+  color: #FFFFFF !important;
+}
+
+#logoDim{
+  filter: invert(48%) sepia(13%) saturate(100%) hue-rotate(130deg) brightness(95%) contrast(80%);
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: #E5E5E5;
+  border-left: 3px solid #F7E249;
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected .anticon {
+  color: #000000 !important;
+  filter: invert(48%) sepia(13%) saturate(100%) hue-rotate(130deg) brightness(95%) contrast(80%) !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected .anticon + span {
+  color: #000000 !important;
+}
+
+
+
+#bottomLogout {
+  position: absolute; 
+  bottom: 0;
+}
+
+#userPostTitle{
+  color:#ACAFB1;
+}
+.userPost {
+  color: #8A94A6;
+}
+
+.logoBackground {
+  /* position: relative; */
+  height: 85px !important;
+  width: 85px !important;
+  background-image: url("/images/dashboard/Circular.svg");
+}
+
+
+/* table */
+.superAdminLineColor {
+  background:#0C66FF;
+}
+.ant-table-thead > tr > th {
+  color: #A7A7A7 !important;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid transparent !important;
+}
+
+
+.sidebarLogout {
+  bottom: 50px;
+  width: 100% !important;
+  position: absolute !important;
+}
+
+.pieSubT{
+  position: absolute;
+  top: 34%;
+  -ms-transform: translateY(-34%);
+  transform: translateY(-34%);
+  right: 50px;
+}
+
+
+
+@media (min-width: 768px) {
+.navigationState{ display: block !important; }
+.mobileMenu{display: none}
+}
+
+
+@media (max-width: 768px) {
+  .navigationState{ display: none; }
+  .mobileMenu{display: block}
+}
+
+.backIndustrial{
+  border: 2px solid #FF4040;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.backComm{
+  border: 2px solid #B2DF8A;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.backResi{
+  border: 2px solid #A6CEE3;
+box-sizing: border-box;
+cursor: pointer;
+}
+
+
+.positionDynamicView{
+  position: absolute;
+    top: 380px;
+    -ms-transform: translateY(-93%);
+    transform: translateY(-99%);
+    right: 15px;
+    width: 30%
+}
+
+.ant-select-selection {
+  border: 1px solid #F7C92B;
+box-sizing: border-box;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+}
+
+#searchYear{
+  position: absolute;
+  bottom: 5px;
+  transform: translateY(-99%);
+  right: 130px;
+  width: 25%;
+}
+
+.backIndustrial:hover {
+  transform: scale(1.1);
+  /* color: #fff; */
+  background: transparent;
+}
+.backResi:hover {
+  transform: scale(1.1);
+  /* color: #fff; */
+  background: transparent;
+}
+
+.backComm:hover {
+  transform: scale(1.1);
+  /* color: #fff; */
+  background: transparent;
+}

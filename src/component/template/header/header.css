@@ -1,0 +1,55 @@
+.ant-menu.headerEdit {
+    background-color: #1E1C1C !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item > a {
+    color: #ffffff ;
+}
+
+.submenu-title-wrapper.editColor {
+    color: #ffffff ;
+}
+
+.ant-menu-item {
+    color: #1E1C1C;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.dropChild {
+    color: #1890ff;
+    background: orange ;
+}
+
+/* .ant-menu-item-selected {} */
+
+.ant-menu-item.wFont {
+    color: #1E1C1C !important;
+}
+
+.reshapeDiv{
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+
+
+.addJobTitle{
+    position: absolute;
+    top: 10px;
+    /* transform: translateY(-34%); */
+    right: 1px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .navigationState{ display: block; }
+    .mobileMenu{display: none}
+    }
+
+
+
+    @media (max-width: 768px) {
+        .navigationState{ display: none; }
+        .mobileMenu{display: block}
+        }
+
+   
