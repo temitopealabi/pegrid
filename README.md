@@ -1,19 +1,14 @@
-## prunedge_saga
+## PeGrid (Smart Meter Web Application)
+
 
 Url can be access at
-[https://prunedge-saga.netlify.com/](https://prunedge-saga.netlify.com/).
+[https://pegrid.eu-gb.mybluemix.net//](https://pegrid.eu-gb.mybluemix.net//).
 
-In proving my knowledge in Test Driving Development(TDD) 
-which each components are test case are implemented first before writing 
-codes for function or view rendering
-Implemented so far are
-i) signin component with test case.
-ii) signout component with test case.
-iii) profile component with test case.
-iv) redux-saga test component with test case.
-v) dashboard component which entails components like bar chart,
-   circular progressbar and table with test cases.
-vi) profile component with test case.
+To run the project locally
 
- [https://prunedge-saga.netlify.com/](https://prunedge-saga.netlify.com/).
+clone the repo url
+$ yarn 
+$ yarn start
+
+ [https://pegrid.eu-gb.mybluemix.net//](https://pegrid.eu-gb.mybluemix.net//).
 
