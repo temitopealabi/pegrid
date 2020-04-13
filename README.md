@@ -7,7 +7,9 @@ Url can be access at
 To run the project locally
 
 clone the repo url
+
 $ yarn 
+
 $ yarn start
 
  [https://pegrid.eu-gb.mybluemix.net//](https://pegrid.eu-gb.mybluemix.net//).
