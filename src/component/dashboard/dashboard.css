@@ -134,14 +134,49 @@ color: #161515;
 
 
 @media (min-width: 768px) {
-.navigationState{ display: block !important; }
-.mobileMenu{display: none}
+.navigationStateD{ display: block}
+.mobileMenuD{display: none}
+.mr3Mobile{margin-right: 1rem !important;}
+
+.my3Mobile{    margin-bottom: .5rem!important;
+  margin-top: .5rem!important;
+}
 }
 
 
 @media (max-width: 768px) {
-  .navigationState{ display: none; }
-  .mobileMenu{display: block}
+  .navigationStateD{ display: none; }
+  .mobileMenuD{display: block
+  }
+
+  .mr3Mobile{margin-right: 0px !important;}
+  .removePadLeftRight { padding-left: 0px; padding-right: 0px;}
+
+  .my3Mobile{
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .mobileDynamicChart{display: block
+  }
+  .removeChartTitle{ display: none;}
+}
+
+@media screen and (min-width: 600px) {
+  .positionDynamicView{
+    position: absolute;
+      top: 380px;
+      -ms-transform: translateY(-93%);
+      transform: translateY(-99%);
+      right: 15px;
+      width: 30%
+  }
+
+  .dynamicChartt{display: none !important
+  }
 }
 
 .backIndustrial{
@@ -163,14 +198,7 @@ cursor: pointer;
 }
 
 
-.positionDynamicView{
-  position: absolute;
-    top: 380px;
-    -ms-transform: translateY(-93%);
-    transform: translateY(-99%);
-    right: 15px;
-    width: 30%
-}
+
 
 .ant-select-selection {
   border: 1px solid #F7C92B;
@@ -181,7 +209,7 @@ border-radius: 10px;
 
 #searchYear{
   position: absolute;
-  bottom: 5px;
+  bottom: 25px;
   transform: translateY(-99%);
   right: 130px;
   width: 25%;

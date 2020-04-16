@@ -15,7 +15,7 @@ const { SubMenu } = Menu;
 class HeaderMenu extends Component {
     constructor(props) {
         super(props);
-        this.state = { current: 'mail', };
+        this.state = { current: 'mail', asideMobile: 'd-none', showMobileNav: true };
 
 
     }
@@ -32,41 +32,77 @@ class HeaderMenu extends Component {
         const node = window.document.createElement("li");
         const createIcon = window.document.createElement("i");
         createIcon.className = "fa fa-bars";
+        const btnNodeTwo = window.document.createElement("span");
         const btnNode = window.document.createElement("span");
+        const asideTag = document.querySelector("aside");
+        const asideUlTag = document.querySelector("ul.ant-menu.ant-menu-dark");
+        //  ant-menu ant-menu-dark ant-menu-inline-collapsed ant-menu-root ant-menu-inline
+        // 
+        console.log("asideUlTag", asideUlTag);
+
+        asideTag.classList.add(this.state.asideMobile);
+        asideTag.classList.remove("ant-layout-sider", "ant-layout-sider-dark");
+        asideTag.removeAttribute("style")
+        asideUlTag.classList.remove("ant-menu", "ant-menu-dark", "ant-menu-root", "ant-menu-inline")
         btnNode.innerText = "X";
         btnNode.style.cursor = "pointer";
         btnNode.style.color = "#F7E249";
         btnNode.id = "mobileToggle";
-        btnNode.className = "trigger";
-        btnNode.setAttribute("type", this.props.accessData === false ? 'menu-unfold' : 'menu-fold')
+        btnNode.style.fontWeight = " bold"
+        btnNode.className = "trigger navigationState";
+
+        btnNodeTwo.innerText = "X";
+        btnNodeTwo.style.fontWeight = " bold"
+        btnNodeTwo.style.cursor = "pointer";
+        btnNodeTwo.style.color = "#F7E249";
+        btnNodeTwo.id = "mobileToggleSmall";
+        btnNodeTwo.className = "trigger mobileMenu";
+        btnNodeTwo.setAttribute("type", this.props.accessData === false ? 'menu-fold' : 'menu-fold');
+
+        btnNode.setAttribute("type", this.props.accessData === false ? 'menu-unfold' : 'menu-fold');
         node.className = "";
         node.appendChild(btnNode);
-        const der = document.querySelector('ul.ant-menu-horizontal')
-        der.insertBefore(node, der.childNodes[0]);
+        node.appendChild(btnNodeTwo);
+        const mobileMenuIcon = document.querySelector('ul.ant-menu-horizontal');
+        mobileMenuIcon.insertBefore(node, mobileMenuIcon.childNodes[0]);
         setTimeout(() => {
-            const der = document.querySelector('ul.ant-menu-horizontal')
-            der.style.position = "relative";
-            // const menuToggle = document.querySelector('li.ant-menu-submenu-selected');
-            // der.insertBefore(node, der.childNodes[0]);
+            const mobileMenuIcon = document.querySelector('ul.ant-menu-horizontal')
+            mobileMenuIcon.style.position = "relative";
 
-            der.childNodes[1].className = "reshapeDiv";
-            console.log(der.childNodes[1]);
-            der.childNodes[1].style.position = "absolute";
-            der.childNodes[1].style.color = "#FFFFFF"
-            // der.childNodes[1].style.fontSize
-            der.childNodes[1].style.top = "0";
-            der.childNodes[1].style.right = "40px";
-            der.childNodes[1].childNodes[0].childNodes[0].style.color = "#FFFFFF";
-            der.childNodes[1].childNodes[0].childNodes[0].style.fontSize = "1rem";
-            der.childNodes[1].childNodes[0].childNodes[0].innerText = "";
-            der.childNodes[1].childNodes[0].childNodes[0].appendChild(createIcon)
-            console.log(der.childNodes[1].childNodes[0].childNodes[0]);
+            mobileMenuIcon.childNodes[1].className = "reshapeDiv";
+            mobileMenuIcon.childNodes[1].style.position = "absolute";
+            mobileMenuIcon.childNodes[1].style.color = "#FFFFFF";
+            mobileMenuIcon.childNodes[1].style.top = "0";
+            mobileMenuIcon.childNodes[1].style.right = "40px";
+            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].style.color = "#FFFFFF";
+            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].style.fontSize = "1rem";
+            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].innerText = "";
+            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].appendChild(createIcon)
+            mobileMenuIcon.childNodes[1].childNodes[0].className = "mt-2"
+            console.log(mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0]);
         }, 2000);
 
         document.getElementById("mobileToggle").addEventListener("click", () => {
             this.props.collapsedState()
             console.log(this.props.accessData);
+        });
 
+        // get aside div
+        document.getElementById("mobileToggleSmall").addEventListener("click", () => {
+            console.log("how are you");
+            this.setState(prevState => {
+                if (this.state.showMobileNav) {
+                    asideTag.classList.remove(this.state.asideMobile);
+                    asideTag.classList.add("ant-layout-sider", "ant-layout-sider-dark", "ant-layout-sider-collapsed");
+                    asideTag.setAttribute("style", "flex: 0 0 80px; max-width: 80px; min-width: 80px; width: 80px;")
+                    asideUlTag.classList.add("ant-menu", "ant-menu-dark", "ant-menu-inline-collapsed", "ant-menu-root", "ant-menu-inline");
+
+                } else { asideTag.classList.add(this.state.asideMobile); }
+                return { showMobileNav: !prevState.showMobileNav }
+            })
+            console.log("showMobileNav", this.state.showMobileNav);
+
+            // asideTag.classList.add(this.state.asideMobile);
         });
 
         function checkClick() {
@@ -118,36 +154,28 @@ class HeaderMenu extends Component {
                             <Menu.Item className="wFont dropChild" key="setting:1">Logout</Menu.Item>
                             <Menu.Item className="wFont dropChild" key="setting:2">Profile</Menu.Item>
                         </Menu.ItemGroup>
-                        {/* <Menu.ItemGroup title="Item 2">
-                            <Menu.Item className="wFont dropChild" key="setting:3">Option 3</Menu.Item>
-                            <Menu.Item className="wFont dropChild" key="setting:4">Option 4</Menu.Item>
-                        </Menu.ItemGroup> */}
                     </SubMenu>
                 </Menu> : <Menu className="headerEdit " onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                        <Menu.Item key="mail">
-                            <MailOutlined />
-              Navigation One
-            </Menu.Item>
-                        <Menu.Item key="bars">
-                            <MailOutlined />
-              Navigation Two
-            </Menu.Item>
+                        <Menu.Item className="dropChild wFont " key="mail">
+                            {/* <MailOutlined /> */}
+                            <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                        </Menu.Item>
+                        <Menu.Item className="dropChild wFont " key="bars">
+                            {/* <MailOutlined /> */}
+                            <Icon component={() => (<span className="text-dark"><i className="fa fa-comments" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                        </Menu.Item>
                         <SubMenu
                             title={
                                 <span className="submenu-title-wrapper">
                                     <SettingOutlined />
-                  Navigation Three - Submenu
+                  Settings
                 </span>
                             }
                         >
                             <Menu.ItemGroup title="Setting">
-                                <Menu.Item key="setting:1">Logout</Menu.Item>
-                                <Menu.Item key="setting:2">Profile</Menu.Item>
+                                <Menu.Item className="wFont dropChild" key="setting:1">Logout</Menu.Item>
+                                <Menu.Item className="wFont dropChild" key="setting:2">Profile</Menu.Item>
                             </Menu.ItemGroup>
-                            {/* <Menu.ItemGroup title="Item 2">
-                                <Menu.Item key="setting:3">Option 3</Menu.Item>
-                                <Menu.Item key="setting:4">Option 4</Menu.Item>
-                            </Menu.ItemGroup> */}
                         </SubMenu>
 
                     </Menu>}

@@ -34,9 +34,9 @@ const yearInreview = [{type: 2020, payload: [{type:  new Date(2014, 0) , payload
      {type: new Date(2014, 7), payload: [31]}, {type: new Date(2014, 8), payload: [31]}, {type: new Date(2014, 9), payload: [31]}, 
     {type: new Date(2014, 10), payload: [31]}, {type: new Date(2014, 11), payload: [31]}]
 }]
-const listConsumption = [{ id: 1, title: 'Residential', unit: '₦', rate: '25.73', textF: '', percentChange: '+₦2.4(10%)', unitTile: 'per kWh', rateF: 'h3 ', bg: 'backResi', signBg: 'h5' },
-{ id: 2, title: 'Commercial', unit: '₦', rate: '41.66', textF: '', percentChange: '+₦11.80(39%)', unitTile: 'per kWh', rateF: 'h3 ', bg: 'backComm', signBg: 'h5' },
-{ id: 3, title: 'Industrial', unit: '₦', rate: '46.94', textF: '', percentChange: '+₦13.20(19%)', unitTile: 'per kWh', rateF: 'h3 ', bg: ' backIndustrial', signBg: 'h5' }
+const listConsumption = [{ id: 1, title: 'Residential', unit: '₦', rate: '25.73', textF: '', percentChange: '+₦2.4(10%)', unitTile: 'per kWh', rateF: 'h4 ', bg: 'backResi', signBg: 'h6' },
+{ id: 2, title: 'Commercial', unit: '₦', rate: '41.66', textF: '', percentChange: '+₦11.80(39%)', unitTile: 'per kWh', rateF: 'h4 ', bg: 'backComm', signBg: 'h6' },
+{ id: 3, title: 'Industrial', unit: '₦', rate: '46.94', textF: '', percentChange: '+₦13.20(19%)', unitTile: 'per kWh', rateF: 'h4 ', bg: ' backIndustrial', signBg: 'h6' }
 
 ]
 
@@ -135,17 +135,17 @@ class Dashboard extends React.Component {
                             <div>
                                 <Content
                                     style={{
-                                        margin: '24px 16px', padding: 24,
+                                        margin: '24px 8px', padding: 12,
                                         background: '#fff', minHeight: 280,
                                     }}>
-                                    <div className="px-2 ">
+                                    <div className="px-1 ">
                                         <div>
 
                                             {/* time */}
                                             <div className="float-right h1 fontNormal py-2"><b>17:55</b></div>
 
                                             <div className="clearfix"></div>
-                                            <div className="float-right h5 fontNormal pb-2">Wednesday, 1 April 2020</div>
+                                            <div className="float-right h6 fontNormal pb-2">Wednesday, 1 April 2020</div>
 
                                             <div className="clearfix"></div>
                                             <div className="fontDark float-right h6 py-2" style={{fontWeight: '600'}}>Current Average Electricity Price by Customer Type</div>
@@ -153,7 +153,7 @@ class Dashboard extends React.Component {
                                             <div className="clearfix"></div>
                                             {/* types of consumption */}
 
-                                            <div className="text-center py-3 mobileMenu"><span className="text-info">*</span> <span className="px-2 " style={{fontSize: '10px'}}>scroll below content to left to view other info</span></div>
+                                            <div className="text-center py-3 mobileMenu"><span className="text-info">*</span> <span className=" " style={{fontSize: '10px'}}>scroll below content to left to view other info</span></div>
                                             <div className="row d-flex justify-content-start overflow-auto py-2" style={{ flexWrap: 'nowrap' }}>
                                                 {listConsumption.map((data, index) => (
                                                     <div key={index} className="col-md-4 col-10" >
@@ -175,17 +175,17 @@ class Dashboard extends React.Component {
                                             <div className="py-5 " >
                                                 <div className="">
                                                     <div className="h5 fontNormal py-4  "><b>Influencing Factors</b></div>
-                                                    <div className="row d-flex justify-content-start overflow-auto " style={{ flexWrap: 'nowrap' }}>
+                                                    <div className="row " >
 
                                                         <div className="col-md-7 col-sm-12" style={{ borderRight: '1px solid #000000' }}>
-                                                        <div className=""><span className="h5"><b>$</b></span><span className="h3"><b>24.76</b></span></div>
+                                                        <div className=""><span className="h6"><b>$</b></span><span className="h4"><b>24.76</b></span></div>
                                                             <LineChart />
                                                         </div>
                                                         <div className="col-md-5  col-sm-12">
                                                             <div className="pt-4">
-                                                                <h6 className="">---Weather Temp</h6>
-                                                                <h3 className={` text-bold`}>32ºC</h3>
-                                                                <div className="col-md-10 col-sm-12"><div className="float-left">
+                                                                <p className="">---Weather Temp</p>
+                                                                <h4 className={` text-bold`}>32ºC</h4>
+                                                                <div className="col-md-6 col-sm-4"><div className="float-left">
                                                                     <p className={`${joslaText}`}>34ª / 26ª</p>
                                                                 </div>
                                                                 <div className="float-right">
@@ -227,7 +227,7 @@ class Dashboard extends React.Component {
                         </div>
                         <div className="col-md-7 p-4 pr-3" >
                             {/* style={{ height: '100%' }} for div mr-3 */}
-                            <div className="bg-white py-5 mr-3" >
+                            <div className="bg-white py-5 mr3Mobile" >
                                 <div className="px-1">
                                     <div className="h5 fontDark  ml-4 py-3">
                                         Dynamic Price Model
@@ -237,27 +237,32 @@ class Dashboard extends React.Component {
                                 
                                 </div>
                                           {/* dynamic chart */}
-                                <div className="pl-4" style={{position: 'relative'}}>
-                                <DynamicChart />
-                                <div className=" positionDynamicView" ><div className="float-right">
-<div><div className={`${flexCon } my-4  ${lastUpdate}  px-2`}> <div className={`${flex1} pt-3 mx-2`}><img src="/images/dashboard/lastUp.svg" alt="lastUp"/></div>
+                                <div className="px-2"  style={{position: 'relative'}}>
+                                
+                                {/* <div className="" style={{maxWidth: '70%', maxHeight: '350px'}} ><DynamicChart holderChart={"Mobile"}/></div> */}
+                                                { window.screen.width >= 600 &&  <div className="" style={{maxWidth: '70%'}}><DynamicChart  holderChart={"big screen"}/> </div>}
+                                                { window.screen.width  <= 599 &&  <div className="" style={{maxWidth: '70%'}}><DynamicChart  holderChart={"Mobile"}/> </div>}
+
+                                <div className=" positionDynamicView removeChartTitle" >
+                                    <div className="float-right">
+<div style={{minWidth: '240px'}}><div className={`${flexCon } my-4  ${lastUpdate}  px-2`}> <div className={`${flex1} pt-3 mx-2`}><img src="/images/dashboard/lastUp.svg" alt="lastUp"/></div>
 <div className="px-2"><p className="fontNormal pt-2"><b>Last Update</b></p>
 <div><span className="fontNormal mr-3">12:45:23</span><span className="float-right fontNormal">30/03/2020</span></div>
 </div>
 </div></div>
 <div className="h6 fontNormal mt-5 mb-4">1 Month Forecast</div>
 <div className="my-2"><div>Residential</div>
-                <div><span className="h5"><b>₦</b></span><span className="h3"><b>36.40</b></span>
+                <div><span className="h5"><b>₦</b></span><span className="h4"><b>36.40</b></span>
                 <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
 </div>
 
 <div className="mb-4"><div>Commercial</div>
-                <div><span className="h5"><b>₦</b></span><span className="h3"><b>52.80</b></span>
+                <div><span className="h5"><b>₦</b></span><span className="h4"><b>52.80</b></span>
                 <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
 </div>
 
 <div className="mb-4"><div>Industrial</div>
-                <div><span className="h5"><b>₦</b></span><span className="h3"><b>58.00</b></span>
+                <div><span className="h5"><b>₦</b></span><span className="h4"><b>58.00</b></span>
                 <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
 </div>
 
@@ -267,8 +272,42 @@ class Dashboard extends React.Component {
 
 </div></div>
 
+{/* mobile screen to view data */}
+<div className="mx-2 mobileDynamicChart dynamicChartt"  >
+<div style={{minWidth: '240px'}}><div className={`${flexCon } my-4  ${lastUpdate}  px-2`}> <div className={`${flex1} pt-3 mx-2`}><img src="/images/dashboard/lastUp.svg" alt="lastUp"/></div>
+<div className="px-2"><p className="fontNormal pt-2"><b>Last Update</b></p>
+<div><span className="fontNormal mr-3">12:45:23</span><span className="float-right fontNormal">30/03/2020</span></div>
+</div>
+</div></div>
+<div className="h6 fontNormal mt-5 mb-4">1 Month Forecast</div>
+<div className="my-2"><div>Residential</div>
+                <div><span className="h5"><b>₦</b></span><span className="h4"><b>36.40</b></span>
+                <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
+</div>
+
+<div className="mb-4"><div>Commercial</div>
+                <div><span className="h5"><b>₦</b></span><span className="h4"><b>52.80</b></span>
+                <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
+</div>
+
+<div className="mb-4"><div>Industrial</div>
+                <div><span className="h5"><b>₦</b></span><span className="h4"><b>58.00</b></span>
+                <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
+</div>
+
+<div className="my-4">
+<SelectDropDown holderData={"Moving Avg"} avgUseage={avgUseage}/>
+</div>
+
+</div>
+
+{/* for mobile search year */}
+<div className="mx-2  mobileDynamicChart dynamicChartt"><SelectDropDown holderData={"Monthly"}  yearData={yearInreview}/></div>
+
+
+
 {/* for 2 dropdown beside legends */}
-<div id="searchYear">
+<div id="searchYear " className="removeChartTitle">
     <div className="float-right"><SelectDropDown holderData={"Monthly"}  yearData={yearInreview}/></div>
 </div>
                                 </div>
@@ -284,26 +323,26 @@ class Dashboard extends React.Component {
                                     <div className="text-dark h5 my-3">Revenue generated</div>
                                             
                                             <div className="mt-2" style={{ borderLeft: '1px solid #000000' }}>
-                                           <div className="mx-2">
+                                           <div className="mx-2 my-5">
                                            
                                             <div className="row ">
-                                                <div className="col">
-                                                <div className="px-2">
+                                                <div className="col-md col-sm-12">
+                                                <div className="px-2 text-center">
                                                 <p>Annual Total</p>
-                                                    <span className={`h5`}><b>₦</b></span>
-                                                                <span className={`h3`}><b>25.73</b></span> 
+                                                    <span className={`h6`}><b>₦</b></span>
+                                                                <span className={`h4`}><b>25.73</b></span> 
                                                 </div>
                                                 </div>
-                                                <div className="col my-2" >
+                                                <div className="col-md col-sm-12 my-2 text-center" >
                                                 <div className="pl-2" style={{ borderLeft: '1px solid #000000' }}>
                                                 <p>Daily Average</p>
-                                                    <span className={`h5`}>₦</span>
+                                                    <span ><b>₦</b></span>
                                                                 <span className={`h5`}><b>25.73</b></span> 
                                                     </div></div>
-                                                <div className="col my-2" >
+                                                <div className="col-md col-sm-12 my-2 text-center" >
                                                     <div className="pl-2" style={{ borderLeft: '1px solid #000000' }}>
                                                     <p>Monthly Average</p>
-                                                    <span className={`h5`}><b>₦</b></span>
+                                                    <span><b>₦</b></span>
                                                                 <span className={`h5`}><b>25.73</b></span> 
                                                     </div>
                                                 </div>
@@ -316,31 +355,31 @@ class Dashboard extends React.Component {
                                             <div className="mt-4">
                                     <div className="text-dark h5">Load generated</div>
                                             
-                                            <div style={{ borderLeft: '1px solid #000000' }}>
+                                            <div style={{ borderLeft: '1px solid #000000' }} className="my-5">
                                            <div className="mx-2 mb-5">
                                            
                                             <div className="row my-3">
-                                                <div className="col-5" style={{paddingRight: '7px'}}>
+                                                <div className="col-md-5 col-sm-12 text-center" style={{paddingRight: '7px'}}>
                                                 <div className="pl-2">
                                                 <p>Annual Total</p>
-                                                <span className={`h3`}><b>64,234</b></span> 
-                                                    <span className={`h5`}> <b>{` kw`} </b></span>
+                                                <span className={`h4`}><b>64,234</b></span> 
+                                                    <span className={`h6`}> <b>{` kw`} </b></span>
                                                                
                                                 </div>
                                                 </div>
-                                                <div className="col-3 my-2" >
+                                                <div className="col-md-3 col-sm-12  my3Mobile text-center" >
                                                 <div className="pl-2" style={{ borderLeft: '1px solid #000000' }}>
                                                 <p>Daily Average</p>
                                                     
                                                                 <span className={`h5`}><b>72</b></span> 
-                                                                <span className={`h6`}><b>{` kw`}</b></span>
+                                                                <span ><b>{` kw`}</b></span>
                                                     </div></div>
-                                                <div className="col my-2" >
+                                                <div className="col-md col-sm-12  my3Mobile text-center" >
                                                     <div className="pl-2" style={{ borderLeft: '1px solid #000000' }}>
                                                     <p>Monthly Average</p>
                                                     
                                                                 <span className={`h5`}><b>598</b></span> 
-                                                                <span className={`h6`}> <b>{` kw`} </b> </span>
+                                                                <span> <b>{` kw`} </b> </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -349,18 +388,18 @@ class Dashboard extends React.Component {
                                     </div>
                                     </div>
 
-                                    <div className="col-md-5  mt-3">
+                                    <div className="col-md-5  mt-3 removePadLeftRight">
 
                                         {/* <UserIcon/> */}
                                         <div className="py-5 bg-white">
                                         <div className="text-center h5"><b>Network Analysis</b> </div>
-                                        <div className="text-center"><img src="/images/dashboard/analysis.svg" alt="analysis"/></div>
+                                        <div className="text-center my-5"><img src="/images/dashboard/analysis.svg" alt="analysis"/></div>
                     {/* Accounting Dept */}
                     <div className="d-flex justify-content-around">
                         <div className="px-1">
                             <div className="pt-3"> <span className="fontNormal  h5">Total Subscribers</span> </div>
                             <div className="pt-4"><span className= {` ${joslaGTextC} px-1`}><i className="fa fa-user"></i></span> <span className="fontNormal  h6 ml-2">Active Subscribers</span></div>
-                            <div className="pt-3"> <span className= {`px-1 text-danger`}><i class="fas fa-exclamation-triangle"></i></span><span className="fontNormal  h6 ml-2">Finance</span> </div>
+                            <div className="pt-3"> <span className= {`px-1 text-danger`}><i className="fas fa-exclamation-triangle"></i></span><span className="fontNormal  h6 ml-2">Finance</span> </div>
                             <div className="pt-3"><span className=""><img src="/images/dashboard/bulb.svg" alt="bulb"/></span><span className="fontNormal  h6 ml-2">Creative</span></div>
                         </div>
                         <div className="px-1">

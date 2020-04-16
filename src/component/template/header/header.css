@@ -2,6 +2,8 @@
     background-color: #1E1C1C !important;
 }
 
+div > .ant-menu-horizontal {    border-bottom: 1px solid transparent;}
+
 .ant-menu-horizontal > .ant-menu-item > a {
     color: #ffffff ;
 }
@@ -14,10 +16,17 @@
     color: #1E1C1C;
 }
 
+/* .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected  {
+    background-color: transparent;
+    color: #1E1C1C !important;
+} */
+
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected.dropChild {
     color: #1890ff;
     background: orange ;
 }
+
+/* className="mobileFont" */
 
 /* .ant-menu-item-selected {} */
 
