@@ -168,7 +168,7 @@ color: #161515;
 @media screen and (min-width: 600px) {
   .positionDynamicView{
     position: absolute;
-      top: 380px;
+      /* top: 380px; */
       -ms-transform: translateY(-93%);
       transform: translateY(-99%);
       right: 15px;
@@ -209,9 +209,9 @@ border-radius: 10px;
 
 #searchYear{
   position: absolute;
-  bottom: 25px;
+  bottom: 1px;
   transform: translateY(-99%);
-  right: 130px;
+  right: 195px;
   width: 25%;
 }
 

@@ -185,7 +185,7 @@ class Dashboard extends React.Component {
                                                             <div className="pt-4">
                                                                 <p className="">---Weather Temp</p>
                                                                 <h4 className={` text-bold`}>32ºC</h4>
-                                                                <div className="col-md-6 col-sm-4"><div className="float-left">
+                                                                <div className="col-md-8 col-sm-4"><div className="float-left">
                                                                     <p className={`${joslaText}`}>34ª / 26ª</p>
                                                                 </div>
                                                                 <div className="float-right">
@@ -240,7 +240,7 @@ class Dashboard extends React.Component {
                                 <div className="px-2"  style={{position: 'relative'}}>
                                 
                                 {/* <div className="" style={{maxWidth: '70%', maxHeight: '350px'}} ><DynamicChart holderChart={"Mobile"}/></div> */}
-                                                { window.screen.width >= 600 &&  <div className="" style={{maxWidth: '70%'}}><DynamicChart  holderChart={"big screen"}/> </div>}
+                                                { window.screen.width >= 600 &&  <div className="" style={{maxWidth: '80%'}}><DynamicChart  holderChart={"big screen"}/> </div>}
                                                 { window.screen.width  <= 599 &&  <div className="" style={{maxWidth: '70%'}}><DynamicChart  holderChart={"Mobile"}/> </div>}
 
                                 <div className=" positionDynamicView removeChartTitle" >
@@ -266,10 +266,15 @@ class Dashboard extends React.Component {
                 <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
 </div>
 
-<div className="my-4">
+<div className="py-4">
 <SelectDropDown holderData={"Moving Avg"} avgUseage={avgUseage}/>
 </div>
+<div className="clearfix"></div>
 
+<div className="pt-4"><SelectDropDown holderData={"Monthly"}  yearData={yearInreview}/></div>
+<div className="py-4"></div>
+<div className="py-4"></div>
+<div className="py-4"></div>
 </div></div>
 
 {/* mobile screen to view data */}
@@ -299,6 +304,8 @@ class Dashboard extends React.Component {
 <SelectDropDown holderData={"Moving Avg"} avgUseage={avgUseage}/>
 </div>
 
+
+
 </div>
 
 {/* for mobile search year */}
@@ -307,9 +314,9 @@ class Dashboard extends React.Component {
 
 
 {/* for 2 dropdown beside legends */}
-<div id="searchYear " className="removeChartTitle">
+{/* <div id="searchYear" className="removeChartTitle">
     <div className="float-right"><SelectDropDown holderData={"Monthly"}  yearData={yearInreview}/></div>
-</div>
+</div> */}
                                 </div>
                              
                             </div>

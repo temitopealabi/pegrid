@@ -6,7 +6,7 @@ const DynamicChart = (props) => {
         <React.Fragment>
             {props.holderChart === 'big screen' && <Chart
                 width={'90%'}
-                height={'700px'}
+                height={'600px'}
 
                 // left={20}
                 // lineWidth={20}
