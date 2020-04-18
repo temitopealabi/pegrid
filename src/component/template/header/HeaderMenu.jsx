@@ -126,17 +126,17 @@ class HeaderMenu extends Component {
         return (
             <React.Fragment>
                 {this.props.chooseHeader === false ? <Menu className={`headerEdit ${floatToRight} `} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal"
-                    style={{ borderBottomWidth: '0px' }}>
+                    style={{ borderBottomWidth: '0px', lineHeight: '7vh', height: '7vh' }}>
 
-                    <Menu.Item className="mt-3" key="bar">
-                        <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '2rem' }}></i></span>)} />
+                    <Menu.Item className="mt-1" key="bar">
+                        <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '1rem' }}></i></span>)} />
                     </Menu.Item>
 
-                    <Menu.Item className="mt-3" key="mail">
-                        <Icon component={() => (<span className="text-white"><i className="fa fa-comments" style={{ fontSize: '2rem' }}></i></span>)} />
+                    <Menu.Item className="mt-1" key="mail">
+                        <Icon component={() => (<span className="text-white"><i className="fa fa-comments" style={{ fontSize: '1rem' }}></i></span>)} />
                     </Menu.Item>
 
-                    <SubMenu className="mt-3 pr-3" style={{ position: 'relative' }}
+                    <SubMenu className="mt-1 pr-3" style={{ position: 'relative' }}
                         title={
                             <React.Fragment>
                                 <span className="submenu-title-wrapper editColor">

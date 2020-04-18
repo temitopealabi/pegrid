@@ -5,7 +5,7 @@ const LineChart = () => {
         // width={'350px'}
         // height={'400px'}
         width={'90%'}
-        height={'300px'}
+        height={'15vh'}
         chartType="LineChart"
         features="smooth"
         loader={<div>Loading Chart</div>}

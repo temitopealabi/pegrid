@@ -25,7 +25,7 @@ const SelectDropDown = (props) => {
     return (<div>
         {props.holderData === 'Monthly' && <Select
             showSearch
-            style={{ width: 200 }}
+            style={{ width: props.widthSize }}
             placeholder={props.holderData}
             optionFilterProp="children"
             onChange={onChange}
@@ -51,7 +51,7 @@ const SelectDropDown = (props) => {
 
         {props.holderData === 'Moving Avg' && <Select
             showSearch
-            style={{ width: 200 }}
+            style={{ width: props.widthSize }}
             placeholder={props.holderData}
             optionFilterProp="children"
             onChange={onChange}

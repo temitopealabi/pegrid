@@ -5,8 +5,8 @@ const DynamicChart = (props) => {
     return (
         <React.Fragment>
             {props.holderChart === 'big screen' && <Chart
-                width={'90%'}
-                height={'600px'}
+                width={'95%'}
+                height={'38vh'}
 
                 // left={20}
                 // lineWidth={20}
@@ -50,7 +50,7 @@ const DynamicChart = (props) => {
                         2: { curveType: 'function', pointSize: '3px', color: '#A6CEE3' }
                     },
                     theme: 'material',
-                    animation: { duration: 2000, easing: "out", startup: true },
+                    animation: { duration: 1000, easing: "out", startup: true },
                     explorer: {
                         actions: ["dragToZoom", "rightClickToReset"],
                     },
@@ -59,7 +59,7 @@ const DynamicChart = (props) => {
                         alignment: 'start',
                         textStyle: {
                             fontFamily: 'Roboto',
-                            fontStyle: 'normal', fontSize: '16', height: 40,
+                            fontStyle: 'normal', fontSize: '12', height: 10, paddingTop: 15,
                         }
                     },
 

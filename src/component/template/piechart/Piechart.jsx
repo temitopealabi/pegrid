@@ -6,7 +6,7 @@ const Piechart = () => {
             // width={'500px'}
             // height={'300px'}
             width={'100%'}
-            height={'100%'}
+            height={'20vh'}
             left={'1px'}
             chartType="PieChart"
             loader={<div>Loading Chart</div>}
@@ -41,7 +41,8 @@ const Piechart = () => {
                     4: { color: '#BC85F5' },
                 },
 
-                chartArea: { left: 0, width: '100%', height: '85%' },
+
+                chartArea: { left: 0, top: 0, width: '100%', height: '85%' },
                 backgroundColor: { stroke: { color: '#e77e75' }, fill: '' }
             }}
             legendToggle
