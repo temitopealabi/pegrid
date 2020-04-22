@@ -31,9 +31,17 @@ class HeaderMenu extends Component {
     addVariable() {
         const node = window.document.createElement("li");
         const createIcon = window.document.createElement("i");
-        createIcon.className = "fa fa-bars";
+        createIcon.className = "fa fa-bell";
+        // const createAlertIcon = window.document.createElement("i");
+        // createAlertIcon.className = "fa fa-bars";
+        const createMsgIcon = window.document.createElement("i");
+        createMsgIcon.className = "fa fa-comments";
+        const btnNodeMsg = window.document.createElement("span");
+        btnNodeMsg.className = "mx-3";
         const btnNodeTwo = window.document.createElement("span");
         const btnNode = window.document.createElement("span");
+        const createBarIcon = window.document.createElement("i");
+        createBarIcon.className = "fa fa-bars";
         const asideTag = document.querySelector("aside");
         const asideUlTag = document.querySelector("ul.ant-menu.ant-menu-dark");
         //  ant-menu ant-menu-dark ant-menu-inline-collapsed ant-menu-root ant-menu-inline
@@ -44,14 +52,14 @@ class HeaderMenu extends Component {
         asideTag.classList.remove("ant-layout-sider", "ant-layout-sider-dark");
         asideTag.removeAttribute("style")
         asideUlTag.classList.remove("ant-menu", "ant-menu-dark", "ant-menu-root", "ant-menu-inline")
-        btnNode.innerText = "X";
+        // btnNode.innerText = "X";
         btnNode.style.cursor = "pointer";
         btnNode.style.color = "#F7E249";
         btnNode.id = "mobileToggle";
         btnNode.style.fontWeight = " bold"
         btnNode.className = "trigger navigationState";
 
-        btnNodeTwo.innerText = "X";
+        // btnNodeTwo.innerText = "X";
         btnNodeTwo.style.fontWeight = " bold"
         btnNodeTwo.style.cursor = "pointer";
         btnNodeTwo.style.color = "#F7E249";
@@ -61,25 +69,29 @@ class HeaderMenu extends Component {
 
         btnNode.setAttribute("type", this.props.accessData === false ? 'menu-unfold' : 'menu-fold');
         node.className = "";
+        btnNode.appendChild(createBarIcon)
         node.appendChild(btnNode);
         node.appendChild(btnNodeTwo);
+        btnNodeMsg.appendChild(createMsgIcon);
+        btnNodeTwo.appendChild(createBarIcon);
         const mobileMenuIcon = document.querySelector('ul.ant-menu-horizontal');
         mobileMenuIcon.insertBefore(node, mobileMenuIcon.childNodes[0]);
         setTimeout(() => {
-            const mobileMenuIcon = document.querySelector('ul.ant-menu-horizontal')
-            mobileMenuIcon.style.position = "relative";
+            const mobileMenuIcon = document.querySelector('ul.ant-menu-horizontal');
 
+            mobileMenuIcon.style.position = "relative";
             mobileMenuIcon.childNodes[1].className = "reshapeDiv";
             mobileMenuIcon.childNodes[1].style.position = "absolute";
             mobileMenuIcon.childNodes[1].style.color = "#FFFFFF";
             mobileMenuIcon.childNodes[1].style.top = "0";
             mobileMenuIcon.childNodes[1].style.right = "40px";
-            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].style.color = "#FFFFFF";
+            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].style.color = "#F7E249";
             mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].style.fontSize = "1rem";
             mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].innerText = "";
-            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].appendChild(createIcon)
-            mobileMenuIcon.childNodes[1].childNodes[0].className = "mt-2"
-            console.log(mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0]);
+            mobileMenuIcon.childNodes[1].childNodes[0].childNodes[0].appendChild(createIcon);
+            mobileMenuIcon.childNodes[1].childNodes[0].appendChild(btnNodeMsg);
+            mobileMenuIcon.childNodes[1].childNodes[0].className = "mt-2";
+            console.log(mobileMenuIcon);
         }, 2000);
 
         document.getElementById("mobileToggle").addEventListener("click", () => {
@@ -96,6 +108,7 @@ class HeaderMenu extends Component {
                     asideTag.classList.add("ant-layout-sider", "ant-layout-sider-dark", "ant-layout-sider-collapsed");
                     asideTag.setAttribute("style", "flex: 0 0 80px; max-width: 80px; min-width: 80px; width: 80px;")
                     asideUlTag.classList.add("ant-menu", "ant-menu-dark", "ant-menu-inline-collapsed", "ant-menu-root", "ant-menu-inline");
+
 
                 } else { asideTag.classList.add(this.state.asideMobile); }
                 return { showMobileNav: !prevState.showMobileNav }
@@ -156,27 +169,12 @@ class HeaderMenu extends Component {
                         </Menu.ItemGroup>
                     </SubMenu>
                 </Menu> : <Menu className="headerEdit " onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
-                        <Menu.Item className="dropChild wFont " key="mail">
+                        <Menu.Item className="dropChild wFont mobileMenu" >
                             {/* <MailOutlined /> */}
-                            <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                            {/* <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                            <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '0.8rem' }}></i></span>)} /> */}
                         </Menu.Item>
-                        <Menu.Item className="dropChild wFont " key="bars">
-                            {/* <MailOutlined /> */}
-                            <Icon component={() => (<span className="text-dark"><i className="fa fa-comments" style={{ fontSize: '0.8rem' }}></i></span>)} />
-                        </Menu.Item>
-                        <SubMenu
-                            title={
-                                <span className="submenu-title-wrapper">
-                                    <SettingOutlined />
-                  Settings
-                </span>
-                            }
-                        >
-                            <Menu.ItemGroup title="Setting">
-                                <Menu.Item className="wFont dropChild" key="setting:1">Logout</Menu.Item>
-                                <Menu.Item className="wFont dropChild" key="setting:2">Profile</Menu.Item>
-                            </Menu.ItemGroup>
-                        </SubMenu>
+
 
                     </Menu>}
             </React.Fragment>

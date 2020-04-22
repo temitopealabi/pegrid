@@ -123,42 +123,48 @@ color: #161515;
   position: absolute !important;
 }
 
-.pieSubT{
-  position: absolute;
-  top: 14%;
-  -ms-transform: translateY(-14%);
-  transform: translateY(-14%);
-  right: 50px;
-}
+
 
 .netAnalysis14F{ font-size: 14px;}
 
 .monthlyGraph{
   position: absolute;
-    top: 46%;
+    top: 44%;
     -ms-transform: translateY(-44%);
     /* transform: translateY(-34%); */
     left: 0;
-    width: 64%;
+    width: 70%;
+    margin-top: 9px;
 }
 
 
 
 @media (min-width: 768px) {
-.navigationStateD{ display: block}
-.mobileMenuD{display: none}
+/* .navigationStateD{ display: block} */
+.mobileMenuD{display: none !important}
 .mr3Mobile{margin-right: 1rem !important;}
 
 .my3Mobile{    margin-bottom: .5rem!important;
   margin-top: .5rem!important;
 }
+
+.pieSubT{
+  position: absolute;
+  top: 10%;
+  transform: translateY(-44%);
+  right: 70px;
+  font-size: 1rem;
+}
+
 }
 
 
 @media (max-width: 768px) {
-  .navigationStateD{ display: none; }
-  .mobileMenuD{display: block
+  .navigationStateD{ display: none !important; }
+  .mobileMenuD{display: block;
   }
+
+  .centerFont {text-align: center!important;}
 
   .mr3Mobile{margin-right: 0px !important;}
   .removePadLeftRight { padding-left: 0px; padding-right: 0px;}
@@ -166,6 +172,20 @@ color: #161515;
   .my3Mobile{
     margin-top: 1rem!important;
     margin-bottom: 1rem!important;
+  }
+
+  .remMrgBtm{margin-bottom: 0px !important}
+  .remMrgTop{margin-top: 0px !important}
+
+  .btmNavSel{ background :#F7E249;}
+
+
+  .pieSubT{
+    position: absolute;
+    top: 20px;
+    transform: translateY(-44%);
+    right: 35px;
+    font-size: 12px;
   }
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
-const Piechart = () => {
+const Piechart = (props) => {
+
+    const { pieStyle } = props;
     return (<div className="w-100">
         <Chart
             // width={'500px'}
@@ -21,7 +23,7 @@ const Piechart = () => {
                 title: 'Component',
                 titleTextStyle: {
                     fontName: "Roboto",
-                    fontStyle: 'normal', fontSize: 16,
+                    fontStyle: 'normal', fontSize: pieStyle.textFont,
                     fontWeight: '900'
                 },
                 legend: {
@@ -29,7 +31,7 @@ const Piechart = () => {
                     alignment: 'end',
                     textStyle: {
                         fontFamily: 'Roboto',
-                        fontStyle: 'normal', fontSize: 16,
+                        fontStyle: 'normal', fontSize: pieStyle.legendFont,
                         fontWeight: '900'
                     }
                 },

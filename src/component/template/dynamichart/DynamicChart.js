@@ -1,7 +1,8 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
 const DynamicChart = (props) => {
-    console.log(props.holderChart)
+    console.log(props.holderChart);
+    const { dynamicStyle } = props;
     return (
         <React.Fragment>
             {props.holderChart === 'big screen' && <Chart
@@ -29,7 +30,7 @@ const DynamicChart = (props) => {
                 ]}
                 options={{
                     hAxis: {
-                        title: 'Time',
+                        title: 'Date',
                         theme: 'material',
                         label: 'auto',
                         textPosition: 'bottom',
@@ -59,7 +60,8 @@ const DynamicChart = (props) => {
                         alignment: 'start',
                         textStyle: {
                             fontFamily: 'Roboto',
-                            fontStyle: 'normal', fontSize: '12', height: 10, paddingTop: 15,
+                            fontStyle: 'normal', fontSize: dynamicStyle.legendFont, height: 10, paddingTop: 15,
+                            // dynamicStyle.legendFont.textFont
                         }
                     },
 
@@ -105,7 +107,7 @@ const DynamicChart = (props) => {
                         // label: 'auto',
                         textPosition: 'in'
                     },
-                    chartArea: { left: 0, top: 0, width: '90%', height: '75%' },
+                    chartArea: { left: 0, top: 0, width: '95%', height: '75%' },
                     // series is use if you want to target a particular plotted line
                     series: {
                         0: { curveType: 'function', pointSize: '3px', color: '#B2DF8A' },
@@ -122,7 +124,7 @@ const DynamicChart = (props) => {
                         alignment: 'start',
                         textStyle: {
                             fontFamily: 'Roboto',
-                            fontStyle: 'normal', fontSize: '16', height: 40,
+                            fontStyle: 'normal', fontSize: dynamicStyle.legendFont, height: 40,
                         }
                     },
 

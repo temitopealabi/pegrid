@@ -34,6 +34,8 @@ div > .ant-menu-horizontal {    border-bottom: 1px solid transparent;}
     color: #1E1C1C !important;
 }
 
+
+
 .reshapeDiv{
     position: absolute;
     top: 0px;
@@ -59,6 +61,18 @@ div > .ant-menu-horizontal {    border-bottom: 1px solid transparent;}
     @media (max-width: 768px) {
         .navigationState{ display: none; }
         .mobileMenu{display: block}
+
+
+        .ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected.mobileMenu  {
+            border-bottom: 0px solid transparent !important;
+        }
+
+        .ant-menu-submenu.ant-menu-submenu-popup.ant-menu-light {
+            display: none;
+        }
+        .removeSubMenu {
+           
+        }
         }
 
    

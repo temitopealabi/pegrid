@@ -1,6 +1,6 @@
 import React from 'react';
 import { Chart } from "react-google-charts";
-const LineChart = () => {
+const LineChart = (props) => {
     return (<Chart
         // width={'350px'}
         // height={'400px'}
@@ -44,7 +44,7 @@ const LineChart = () => {
                 position: "top",
                 textStyle: {
                     fontFamily: 'Roboto',
-                    fontStyle: 'normal', fontSize: '16',
+                    fontStyle: 'normal', fontSize: props.fontSize,
                     fontWeight: '900'
                 }
             },

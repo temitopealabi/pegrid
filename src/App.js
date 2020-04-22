@@ -6,12 +6,14 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionTypes from './store/actions/index';
 import Storage from "./service/Storage.js";
-
-import NotFound from './component/not-found/NotFound';
-import ProtectedRoute from './component/ProtectedRoute.jsx';
 import Dashboard from './component/dashboard/Dashboard.jsx';
+import FormChecker from './component/template/form/FormChecker';
+import NotFound from './component/not-found/NotFound';
+// import ProtectedRoute from './component/ProtectedRoute.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+
+
 
 const serverData = new Storage();
 const tempArr = [{ name: 'Alabi', age: 30, isOnline: true }];
@@ -31,7 +33,9 @@ class App extends Component {
         <ToastContainer />
         <Switch>
           <Route path="/not-found" component={NotFound} />
+          <Route path="/form" component={FormChecker} />
           <Route path="/" component={Dashboard} />
+
           <Redirect to="/not-found" />
         </Switch>
       </div>

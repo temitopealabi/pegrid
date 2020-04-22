@@ -224,3 +224,28 @@
 // </SubMenu>
 
 // </Menu>
+
+/*
+<Menu.Item className="dropChild wFont " key="mail">
+                         <MailOutlined />
+                           <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                            <Icon component={() => (<span style={{ color: '#F7E249' }}><i className="fa fa-bell" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                            </Menu.Item>
+<Menu.Item className="dropChild wFont " key="bars">
+                         <MailOutlined />
+                            <Icon component={() => (<span className="text-dark"><i className="fa fa-comments" style={{ fontSize: '0.8rem' }}></i></span>)} />
+                        </Menu.Item>
+                        <SubMenu
+                            title={
+                                <span className="submenu-title-wrapper">
+                                    <SettingOutlined />
+                  Settings
+                </span>
+                            }
+                        >
+                            <Menu.ItemGroup title="Setting">
+                                <Menu.Item className="wFont dropChild" key="setting:1">Logout</Menu.Item>
+                                <Menu.Item className="wFont dropChild" key="setting:2">Profile</Menu.Item>
+                            </Menu.ItemGroup>
+                        </SubMenu>
+*/
