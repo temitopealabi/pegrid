@@ -249,16 +249,20 @@ const Regulator = (props) => {
                                     <span className="ml-3"><span className={`${fh4} ${joslaGTextC}`}><i className="fas fa-sort-down"></i></span><span className={joslaGTextC}>42%</span></span></div>
                             </div>
 
-                            <div className="py-2 mt-2 float-right">
-                                <SelectDropDown widthSize={'150px'} holderData={"Moving Avg"} avgUseage={avgUseage} />
-                            </div>
+                            <span className="float-left py-2 mt-2">
+                                {/* <SelectDropDown holderData={"Monthly"} widthSize={'130px'} yearData={yearInreview} /> */}
+                                <CalenderForm sendDate={getSelectedDate} widthSize={"120px"} />
+                            </span>
+                            <span className="py-2 mt-2 float-right">
+                                <SelectDropDown widthSize={'135px'} holderData={"Moving Avg"} avgUseage={avgUseage} />
+                            </span>
                             <div className="clearfix"></div>
 
 
 
                         </div></div>
 
-                    <div className="monthlyGraph removeChartTitle"><div className="float-right">
+                    <div className="monthlyGraph removeChartTitle d-none"><div className="float-right">
                         {/* <SelectDropDown holderData={"Monthly"} widthSize={'130px'} yearData={yearInreview} /> */}
                         <CalenderForm sendDate={getSelectedDate} widthSize={"130px"} />
                     </div></div>

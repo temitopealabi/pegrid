@@ -47,7 +47,7 @@ const Consumer = () => {
                                         </div>
                                         <div style={{ flex: '1' }}>
                                             <div id={imgConsumer} >
-                                                <div className="mx-2"> <img width="80" src="/images/consumer/discoLogo.png" alt="disco logo" /></div>
+                                                <div className="mx-2"> <img width="80" src="/images/consumer/ikelectric.png" alt="disco logo" /></div>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@ const Consumer = () => {
             <div className="container-fluid ">
                 <div className="bg-white" style={{ borderRadius: '10px' }}>
                     <div className="container">
-                        <div className="d-flex justify-content-between py-2">
+                        <div className="d-flex justify-content-between pt-4">
                             <div className={`${hoverAssign}  ${activeMouse}`} onClick={() => handleUniqueMenu('Electricity Consumption')}>
                                 <div className={`text-center  `}>Electricity Consumption</div>
                                 <div className={`text-center mx-2 my-1 ${underTitleSum}`}><div className=" " style={{ height: '2px' }}></div></div>

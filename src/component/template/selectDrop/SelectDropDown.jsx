@@ -22,7 +22,7 @@ const SelectDropDown = (props) => {
     function onSearch(val) {
         console.log('search:', val);
     }
-    return (<div>
+    return (<span>
         {props.holderData === 'Monthly' && <Select
             showSearch
             style={{ width: props.widthSize }}
@@ -74,7 +74,7 @@ const SelectDropDown = (props) => {
                 <Option id={index} key={index} value={data.type}>{data.type} </Option>
             )}
         </Select>}
-    </div>);
+    </span>);
 }
 
 export default SelectDropDown;
