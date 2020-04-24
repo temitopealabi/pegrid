@@ -43,7 +43,7 @@ const DynamicChart = (props) => {
                         // label: 'auto',
                         textPosition: 'in'
                     },
-                    chartArea: { left: 0, top: 0, width: '90%', height: '75%' },
+                    chartArea: { left: 0, top: 0, width: '95%', height: '75%' },
                     // series is use if you want to target a particular plotted line
                     series: {
                         0: { curveType: 'function', pointSize: '3px', color: '#B2DF8A' },
@@ -51,7 +51,7 @@ const DynamicChart = (props) => {
                         2: { curveType: 'function', pointSize: '3px', color: '#A6CEE3' }
                     },
                     theme: 'material',
-                    animation: { duration: 1000, easing: "out", startup: true },
+                    // animation: { duration: 1000, easing: "out", startup: true },
                     explorer: {
                         actions: ["dragToZoom", "rightClickToReset"],
                     },

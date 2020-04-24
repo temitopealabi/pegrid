@@ -7,11 +7,13 @@ import { connect } from "react-redux";
 import * as actionTypes from './store/actions/index';
 import Storage from "./service/Storage.js";
 import Dashboard from './component/dashboard/Dashboard.jsx';
+import Home from './component/home/Home';
 import FormChecker from './component/template/form/FormChecker';
 import NotFound from './component/not-found/NotFound';
 // import ProtectedRoute from './component/ProtectedRoute.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+
 
 
 
@@ -34,7 +36,8 @@ class App extends Component {
         <Switch>
           <Route path="/not-found" component={NotFound} />
           <Route path="/form" component={FormChecker} />
-          <Route path="/" component={Dashboard} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/" component={Home} />
 
           <Redirect to="/not-found" />
         </Switch>

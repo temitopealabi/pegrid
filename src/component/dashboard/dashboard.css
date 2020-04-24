@@ -12,9 +12,7 @@
   font-size: 1.15rem; color: white
 }
 
-.fontDark{
-  color: #000000;
-}
+
 
 .trigger:hover {
   color: #1890ff;
@@ -22,12 +20,7 @@
 
 .superAdminLine { height: 6px; }
 
-.fontNormal{
-  font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-color: #161515;
-}
+
 
 
 .ant-layout-header {
@@ -225,8 +218,8 @@ color: #161515;
 .backResi{
   border: 2px solid #A6CEE3;
 box-sizing: border-box;
-cursor: pointer;
 }
+
 
 
 

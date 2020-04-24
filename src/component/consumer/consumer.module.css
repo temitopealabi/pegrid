@@ -1,0 +1,35 @@
+
+
+    .dispUseage{
+        border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 5px;
+    }
+
+    .dispUseageTime{
+        font-size: 8px;
+    }
+
+#enrgTips{
+    background: rgba(192, 187, 149, 0.1);
+    border-radius: 5px;
+}
+
+.hoverAssign:hover .underTitleSum { background: #F7C92B; }
+.activeUnderTitleSum { background: #F7C92B; }
+
+    @media (min-width: 768px) {
+        #imgConsumer{     
+            position: absolute;
+            bottom: 25px;
+            right: 0;
+            z-index: 3;}
+    }
+
+    @media (max-width: 768px) {
+        #imgConsumer{     
+            position: absolute;
+            bottom: 55px;
+            right: 0;
+            z-index: 3;}
+    }
