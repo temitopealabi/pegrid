@@ -1,8 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Layout, Menu, Icon } from 'antd';
+import Championship from './championship/Championship';
+import BillStatement from './bill&state/BillStatement';
 import consumerCss from './consumer.module.css';
 import generalCss from '../general.module.css';
-import Championship from './championship/Championship';
+
 
 
 const { Content } = Layout;
@@ -101,7 +103,7 @@ const Consumer = () => {
 
                     <div className="mx-3">
                         <div className="d-flex  justify-content-between">
-                            <div className={` ${fontDark}  h4`}>17:55</div>
+                            <div className={` ${fontDark}  ${fontNormal}  h4`}>17:55</div>
                             <div className={`${fontDark} px-2`}>Wednesday, 1 April 2020</div>
                             <div class=""><img src="/images/dashboard/moon.svg" width="35" alt="moon" /></div>
                             <div><div className={`${remMrgBtm} h5`}><b>32ºC </b></div>
@@ -145,7 +147,7 @@ const Consumer = () => {
             </div>
 
             {/* Summary of quick menu */}
-            <div className="container-fluid ">
+            <div className="container-fluid pb-2">
                 <div className="bg-white" style={{ borderRadius: '10px' }}>
                     <div className="container">
                         <div className="d-flex justify-content-between pt-4">
@@ -159,7 +161,8 @@ const Consumer = () => {
                             </div>
                             <div className={`${hoverAssign}  ${activeMouse}`} onClick={() => handleUniqueMenu('Billing and Statement')}>
                                 <div className={`text-center `}>Billing and Statement</div>
-                                <div className={`text-center mx-2  my-1 ${underTitleSum}`}><div className=" " style={{ height: '2px' }}></div></div>
+                                {/* <div className={`text-center mx-2  my-1 ${underTitleSum}`}><div className=" " style={{ height: '2px' }}></div></div> */}
+                                <div className={`text-center mx-2 my-1 ${underTitleSum} ${activeSumTab === 'Billing and Statement' && `${activeUnderTitleSum}`}`}><div className=" " style={{ height: '2px' }}></div></div>
                             </div>
                             <div className={`${hoverAssign} ${activeMouse}`} onClick={() => handleUniqueMenu('Championship')}>
                                 <div className={`text-center `}>Championship</div>
@@ -169,6 +172,7 @@ const Consumer = () => {
 
                         {/* conditional slide for each summary */}
                         {activeSumTab === 'Championship' && <Championship />}
+                        {activeSumTab === 'Billing and Statement' && <BillStatement />}
                     </div>
                 </div>
             </div>

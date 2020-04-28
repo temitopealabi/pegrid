@@ -14,12 +14,18 @@
     border: 1px solid #F7C92B;
 }
 
+.smallFin{color: #525E59;}
+
+.font12{ font-size: 12px;}
+
 .fontNormal{
   font-family: Poppins;
 font-style: normal;
 font-weight: normal;
-color: #161515;
+
 }
+
+.fontCLight{ color: #161515;}
 
 .mrgBtm6 {
   margin-bottom: 6px;
@@ -35,6 +41,8 @@ color: #161515;
 .remMrgTop{margin-top: 0px !important}
 
 .fh4{font-size: 1.5rem;}
+
+.netAnalysis14F{ font-size: 14px;}
 
 .joslaGTextC{
   color: #009051;

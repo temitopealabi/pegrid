@@ -1,0 +1,13 @@
+.editButton:hover {
+    background-color: transparent;
+    color: black !important;
+}
+
+.editButton:hover #forPay {
+    background-color: black ;
+}
+
+.editButtonTwo:hover {
+    background-color: #F7C92B !important;
+    color: #ffffff !important;
+}

@@ -7,8 +7,12 @@ import HeaderMenu from '../template/header/HeaderMenu';
 
 import Regulator from '../regulator/Regulator';
 import Consumer from '../consumer/Consumer';
+import Genco from '../genco/Genco';
+import Disco from '../disco/Disco';
+import Transco from '../transco/Transco';
 import generalCss from '../general.module.css'
 import './dashboard.css';
+
 
 
 
@@ -66,19 +70,30 @@ class Dashboard extends React.Component {
                             </NavLink>
                         </Menu.Item>
 
-                        <Menu.Item key="2" className="my-4">
-                            {/* <img className="mb-2" src="/images/dashboard/sidebar/User.svg" alt="userIcon" /> */}
-                            <Icon component={() => (<span className="menuIcon"><i className="fas fa-user-cog"></i></span>
-                            )} />
-                            <span className="h5">Genco</span>
+                        <Menu.Item key="/dashboard/genco" className="my-4">
+                            <NavLink to="/dashboard/genco">
+                                {/* <img className="mb-2" src="/images/dashboard/sidebar/User.svg" alt="userIcon" /> */}
+                                <Icon component={() => (<span className="menuIcon"><i className="fas fa-user-cog"></i></span>
+                                )} />
+                                <span className="h5">Genco</span>
+                            </NavLink>
+
                         </Menu.Item>
-                        <Menu.Item key="3" className="my-4">
-                            <Icon component={() => (<span className="menuIcon"><i className="fas fa-user-tag"></i></span>)} />
-                            <span className="h5">Transco</span>
+
+                        <Menu.Item key="/dashboard/transco" className="my-4">
+                            <NavLink to="/dashboard/transco">
+                                <Icon component={() => (<span className="menuIcon"><i className="fas fa-user-tag"></i></span>)} />
+                                <span className="h5">Transco</span>
+                            </NavLink>
+
                         </Menu.Item>
-                        <Menu.Item key="4" className="my-4">
-                            <Icon component={() => (<span className="menuIcon"><i className="fas fa-user-tie"></i></span>)} />
-                            <span className="h5">DisCo</span>
+
+                        <Menu.Item key="/dashboard/disco" className="my-4">
+                            <NavLink to="/dashboard/disco">
+                                <Icon component={() => (<span className="menuIcon"><i className="fas fa-user-tie"></i></span>)} />
+                                <span className="h5">DisCo</span>
+                            </NavLink>
+
                         </Menu.Item>
 
                         <Menu.Item key="/dashboard/consumer" className="my-4">
@@ -127,8 +142,10 @@ class Dashboard extends React.Component {
 
                         <Route path="/dashboard/regulator" render={(props) => <Regulator  {...props} />} />
 
-                        <Route path="/dashboard/consumer" render={(props) => <Consumer {...props} />}
-                        />
+                        <Route path="/dashboard/consumer" render={(props) => <Consumer {...props} />} />
+                        <Route path="/dashboard/genco" render={(props) => <Genco {...props} />} />
+                        <Route path="/dashboard/disco" render={(props) => <Disco {...props} />} />
+                        <Route path="/dashboard/transco" render={(props) => <Transco {...props} />} />
                     </Switch>
 
                 </Layout>

@@ -42,7 +42,8 @@ const yearInreview = [{
 const { Content } = Layout;
 const Regulator = (props) => {
     // const [tabActive, useTabActive]  = useState('Dynamic Price Model');
-    const { robNormF, joslaText, mrgBtm6, flexCon, font12, flex1Ch, flex1, joslaGTextC, fh4, lastUpdate, fontDark, fontNormal } = generalCss;
+    const { robNormF, joslaText, mrgBtm6, flexCon, font12, flex1Ch, flex1, joslaGTextC, fh4,
+        netAnalysis14F, lastUpdate, fontDark, fontNormal } = generalCss;
     const [tabActive, setTabActive] = useState('Current Average')
 
     function handleClickTab(data) {
@@ -425,7 +426,7 @@ const Regulator = (props) => {
 
                                 <div className="d-flex justify-content-around mt-3">
                                     <div className="px-1" style={{ flex: '3' }}>
-                                        <div className=""><span className={` ${joslaGTextC} px-1`}><i className="fa fa-user"></i></span> <span className={`${fontNormal} netAnalysis14F ml-2`}>Active Subscribers</span></div>
+                                        <div className=""><span className={` ${joslaGTextC} px-1`}><i className="fa fa-user"></i></span> <span className={`${fontNormal} ${netAnalysis14F} ml-2`}>Active Subscribers</span></div>
 
                                     </div>
                                     <div className="px-1" style={{ flex: '1' }}>
@@ -436,7 +437,7 @@ const Regulator = (props) => {
 
                                 <div className="d-flex justify-content-around mt-3">
                                     <div className="px-1" style={{ flex: '3' }}>
-                                        <div className=""> <span className={`px-1 text-danger`}><i className="fas fa-exclamation-triangle"></i></span><span className={`${fontNormal}  netAnalysis14F ml-2`}>Finance</span> </div>
+                                        <div className=""> <span className={`px-1 text-danger`}><i className="fas fa-exclamation-triangle"></i></span><span className={`${fontNormal}  ${netAnalysis14F} ml-2`}>Finance</span> </div>
 
                                     </div>
                                     <div className="px-1" style={{ flex: '1' }}>
@@ -447,7 +448,7 @@ const Regulator = (props) => {
 
                                 <div className="d-flex justify-content-around mt-3">
                                     <div className="px-1" style={{ flex: '3' }}>
-                                        <div className=""><span className=""><img src="/images/dashboard/bulb.svg" alt="bulb" /></span><span className={`${fontNormal} netAnalysis14F ml-2`}>Creative</span></div>
+                                        <div className=""><span className=""><img src="/images/dashboard/bulb.svg" alt="bulb" /></span><span className={`${fontNormal} ${netAnalysis14F} ml-2`}>Creative</span></div>
                                     </div>
                                     <div className="px-1" style={{ flex: '1' }}>
                                         <div className=""><span className={`${fontNormal} h6`}><strong>42%</strong></span></div>
@@ -553,7 +554,7 @@ const Regulator = (props) => {
 
                                 <div className="d-flex justify-content-around mt-3">
                                     <div className="px-1" style={{ flex: '3' }}>
-                                        <div className=""><span className={` ${joslaGTextC} px-1`}><i className="fa fa-user"></i></span> <span className={`${fontNormal}  netAnalysis14F ml-2`}>Active Subscribers</span></div>
+                                        <div className=""><span className={` ${joslaGTextC} px-1`}><i className="fa fa-user"></i></span> <span className={`${fontNormal}  ${netAnalysis14F} ml-2`}>Active Subscribers</span></div>
 
                                     </div>
                                     <div className="px-1" style={{ flex: '1' }}>
@@ -564,7 +565,7 @@ const Regulator = (props) => {
 
                                 <div className="d-flex justify-content-around mt-3">
                                     <div className="px-1" style={{ flex: '3' }}>
-                                        <div className=""> <span className={`px-1 text-danger`}><i className="fas fa-exclamation-triangle"></i></span><span className={`${fontNormal}  netAnalysis14F ml-2`}>Finance</span> </div>
+                                        <div className=""> <span className={`px-1 text-danger`}><i className="fas fa-exclamation-triangle"></i></span><span className={`${fontNormal}  ${netAnalysis14F} ml-2`}>Finance</span> </div>
 
                                     </div>
                                     <div className="px-1" style={{ flex: '1' }}>
@@ -575,7 +576,7 @@ const Regulator = (props) => {
 
                                 <div className="d-flex justify-content-around mt-3">
                                     <div className="px-1" style={{ flex: '3' }}>
-                                        <div className=""><span className=""><img src="/images/dashboard/bulb.svg" alt="bulb" /></span><span className={`${fontNormal} netAnalysis14F ml-2`}>Creative</span></div>
+                                        <div className=""><span className=""><img src="/images/dashboard/bulb.svg" alt="bulb" /></span><span className={`${fontNormal} ${netAnalysis14F} ml-2`}>Creative</span></div>
                                     </div>
                                     <div className="px-1" style={{ flex: '1' }}>
                                         <div className=""><span className={`${fontNormal}h6`}><strong>42%</strong></span></div>

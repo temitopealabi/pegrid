@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import generalCss from '../../general.module.css';
-import championCss from './champion.module.css';
+
 
 const Championship = () => {
-    const { font12, joslaText, dispUsedUnit, fontNormal, joslaGTextC } = generalCss;
-    const { smallFin } = championCss;
+    const { font12, joslaText, dispUsedUnit, fontNormal, joslaGTextC, smallFin } = generalCss;
+
     return (<Fragment>
         <div className={`my-3 ${fontNormal}`}> This week champions</div>
 
